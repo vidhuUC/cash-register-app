@@ -21,9 +21,9 @@ const DenominationCard = ({ denomination, setDenominations }: DenominationCardPr
 
     const addDenomination = () => {
         setDenominations(prevState => {
-            return prevState.map(d=> {
-                if(d.type === denomination.type) {
-                    return {...d,count: d.count + 1, value: d.value + d.valueDenomination}
+            return prevState.map(d => {
+                if (d.type === denomination.type) {
+                    return { ...d, count: d.count + 1, value: d.value + d.valueDenomination }
                 }
                 return d;
             })
@@ -34,9 +34,9 @@ const DenominationCard = ({ denomination, setDenominations }: DenominationCardPr
 
     const subtractDenomination = () => {
         setDenominations(prevState => {
-            return prevState.map(d=> {
-                if(d.type === denomination.type) {
-                    return {...d,count: d.count - 1, value: d.value - d.valueDenomination}
+            return prevState.map(d => {
+                if (d.type === denomination.type) {
+                    return { ...d, count: d.count - 1, value: d.value - d.valueDenomination }
                 }
                 return d;
             })
@@ -49,7 +49,9 @@ const DenominationCard = ({ denomination, setDenominations }: DenominationCardPr
                 <img src={imageUrl} className="card-img-top" alt={denomination.type} />
                 <div className="card-body">
                     <button className="btn btn-sm btn-dark position-absolute" style={{ top: 0, right: 0 }} onClick={addDenomination}>+</button>
-                    <button className="btn btn-sm btn-dark position-absolute" style={{ top: 0, left: 0 }} onClick={subtractDenomination}>-</button>
+                    {denomination.count > 0 &&
+                        <button className="btn btn-sm btn-dark position-absolute" style={{ top: 0, left: 0 }} onClick={subtractDenomination}>-</button>
+                    }
                     <div className="card-text">
                         <div className="row">
                             <div className="col-sm-6">
