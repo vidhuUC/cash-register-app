@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/cash-register-app/static/css/main.5e25590f.css",
+    "main.js": "/cash-register-app/static/js/main.01a441f0.js",
+    "index.html": "/cash-register-app/index.html",
+    "main.5e25590f.css.map": "/cash-register-app/static/css/main.5e25590f.css.map",
+    "main.01a441f0.js.map": "/cash-register-app/static/js/main.01a441f0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5e25590f.css",
+    "static/js/main.01a441f0.js"
+  ]
+}
